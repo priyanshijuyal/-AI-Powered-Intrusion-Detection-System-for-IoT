@@ -1,0 +1,24 @@
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Source IP</th>
+            <th>Destination IP</th>
+            <th>Protocol</th>
+            <th>Traffic Type</th>
+            <th>Timestamp</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for row in data %}
+        <tr>
+            <td>{{ row[0] }}</td>
+            <td>{{ row[1] | safe }}</td>
+            <td>{{ row[2] | safe }}</td>
+            <td>{{ row[3] | safe }}</td>
+            <td>{{ row[4] | safe }}</td>
+            <td>{{ row[5] }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
